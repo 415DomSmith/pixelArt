@@ -1,0 +1,43 @@
+.colorButton {
+	margin: 30px auto;
+	border: 1px solid black;
+	width: 14%;
+	length: 3%;
+	float: left;
+	text-align: center;
+}
+
+p {
+	float: left;
+	margin: 100px auto;
+	padding: 10px;
+}
+
+#gh-pages {
+	float: right;
+}
+
+#black {
+	background-color: black;
+	color: white;
+}
+
+#purple {
+	background-color: purple;
+}
+
+#red {
+	background-color: red;
+}
+
+#blue {
+	background-color: blue;
+}
+
+#green {
+	background-color: green;
+}
+
+#brown {
+	background-color: brown;
+}
