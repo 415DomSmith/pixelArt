@@ -22,13 +22,13 @@
 
 
 function canvasMaker(){
-	for (var i = 0; i < 690; i++){
+	for (var i = 0; i < 2838; i++){
 			var blankDiv = document.createElement('div');
 			blankDiv.style.backgroundColor = '';
-  		blankDiv.style.width = '2%';
+  		blankDiv.style.width = '1%';
   		blankDiv.style.float = 'left';
   		//blankDiv.style.position = 'absolute';
-  		blankDiv.style.paddingBottom = '2%';
+  		blankDiv.style.paddingBottom = '1%';
   		blankDiv.style.border = '1px solid black'
 			document.body.appendChild(blankDiv);
 	}
@@ -43,7 +43,7 @@ for(var j = 0; j < divs.length; j++) {
 		this.style.backgroundColor = color;
 
 	});
-	divs[j].addEventListener("dragover", function(event) {event.preventDefault(); changeColor(this);}, false);	
+	//divs[j].addEventListener("dragover", function(event) {event.preventDefault(); }, false);	
 };
 
 
@@ -95,6 +95,13 @@ brown.addEventListener("click", function() {
 	color = "brown";
 	buttonReset();
 	brown.style.backgroundColor = "rgba(94,69,43,0.75)";
+});
+
+var yellow = document.getElementById("yellow");
+yellow.addEventListener("click", function() {
+	color = "yellow";
+	buttonReset();
+	yellow.style.backgroundColor = "rgba(255,247,21,0.35)";
 });
 
 var white = document.getElementById("white");

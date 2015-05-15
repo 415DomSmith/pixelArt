@@ -1,8 +1,8 @@
 .colorButton {
-	margin: 30px auto;
+	margin: 50px auto;
 	margin-right: 5px;
 	border: 1px solid black;
-	width: 11.7%;
+	width: 10.5%;
 	length: 3%;
 	float: left;
 	text-align: center;
@@ -32,11 +32,12 @@
 
 h2{
 	margin-top: 10px;
+	position: absolute;
 }
 
 p {
 	float: left;
-	margin: 80px auto;
+	margin: 10px auto;
 	padding: 10px;
 }
 
@@ -67,4 +68,8 @@ p {
 
 #brown {
 	background-color: brown;
+}
+
+#yellow {
+	background-color: yellow;
 }
