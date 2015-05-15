@@ -20,7 +20,7 @@
 //Get 10 or so small divs on the screen (or 688...)
 //window.onload = function() {
 
-
+//Makes the white grid/canvas.
 function canvasMaker(){
 	for (var i = 0; i < 2838; i++){
 			var blankDiv = document.createElement('div');
@@ -48,13 +48,13 @@ for(var j = 0; j < divs.length; j++) {
 
 
 
-//black, purple, red, blue, green, brown, white
 
 
-//Global variable for color
+
+//holds the color value
 var color =  "white";
 
-
+//Each color buttons click function, and reset call for the other buttons
 var black = document.getElementById("black");
 black.addEventListener("click", function() {
 	color = "black";
@@ -111,14 +111,14 @@ white.addEventListener("click", function() {
 	white.style.backgroundColor = "rgba(100,100,100,0.75)";
 });
 
-
+//reset button function, to visibly deselect the other colors
 var buttons = document.querySelectorAll("h3");
 function buttonReset(){
 	for (var k = 0; k < buttons.length; k++){
 		buttons[k].style.backgroundColor = "";
 	} 
 };
-
+//reset button to refresh page and wipe the board.
 var reset = document.getElementById("reset");
 reset.addEventListener("click", function(){
 		window.location.reload();
