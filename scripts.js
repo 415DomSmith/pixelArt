@@ -32,7 +32,7 @@ function canvasMaker(){
   		blankDiv.style.border = '1px solid black'
 			document.body.appendChild(blankDiv);
 	}
-}		
+};		
 
 canvasMaker();
 
@@ -43,7 +43,10 @@ for(var j = 0; j < divs.length; j++) {
 		this.style.backgroundColor = color;
 
 	});
+	divs[j].addEventListener("dragover", function(event) {event.preventDefault(); changeColor(this);}, false);	
 };
+
+
 
 //black, purple, red, blue, green, brown, white
 
@@ -54,40 +57,64 @@ var color =  "white";
 
 var black = document.getElementById("black");
 black.addEventListener("click", function() {
-	color = "black"
-})
+	color = "black";
+	buttonReset();
+	black.style.backgroundColor = "rgba(20,20,20,0.75)";
+});
 
 var purple = document.getElementById("purple");
 purple.addEventListener("click", function() {
-	color = "purple"
-})
+	color = "purple";
+	buttonReset();
+	purple.style.backgroundColor = "rgba(114,37,163,0.75)";
+});
 
 var red = document.getElementById("red");
 red.addEventListener("click", function() {
-	color = "red"
-})
+	color = "red";
+	buttonReset();
+	red.style.backgroundColor = "rgba(255,0,0,0.55)";
+});
 
 var blue = document.getElementById("blue");
 blue.addEventListener("click", function() {
-	color = "blue"
-})
+	color = "blue";
+	buttonReset();
+	blue.style.backgroundColor = "rgba(0,0,255,0.55)";
+});
 
 var green = document.getElementById("green");
 green.addEventListener("click", function() {
 	color = "green"
-})
+	buttonReset();
+	green.style.backgroundColor = "rgba(0,255,0,0.35)";
+});
 
 var brown = document.getElementById("brown");
 brown.addEventListener("click", function() {
-	color = "brown"
-})
+	color = "brown";
+	buttonReset();
+	brown.style.backgroundColor = "rgba(94,69,43,0.75)";
+});
 
 var white = document.getElementById("white");
 white.addEventListener("click", function() {
-	color = "white"
-})
+	color = "white";
+	buttonReset();
+	white.style.backgroundColor = "rgba(100,100,100,0.75)";
+});
 
 
+var buttons = document.querySelectorAll("h3");
+function buttonReset(){
+	for (var k = 0; k < buttons.length; k++){
+		buttons[k].style.backgroundColor = "";
+	} 
+};
 
+var reset = document.getElementById("reset");
+reset.addEventListener("click", function(){
+		window.location.reload();
+	});
 
 
